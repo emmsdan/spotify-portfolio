@@ -1,5 +1,5 @@
 import './App.css';
-import {LandingPageHeader} from './components/LandingPageHeader'
+import {LandingPageHeader} from './components/Header/LandingPageHeader'
 
 export function App() {
   return (
@@ -8,6 +8,7 @@ export function App() {
   </div>
   );
 }
+
 // returns JSX, and the naming is PascalCase
 
 // Component name must be PascalCase
