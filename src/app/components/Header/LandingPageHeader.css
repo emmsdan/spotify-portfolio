@@ -1,5 +1,5 @@
 .header {
-    height: 80px;
+    min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,15 +11,46 @@
     display: flex;
     gap: 30px;
 }
-
 .menu ul li a {
     padding: 5px;
     text-decoration: none;
     color: #fff;
     font-weight: 500;
     font-size: 15px;
+    text-wrap: nowrap;
 }
 
 .menu ul li.active a {
     color: #D9DADA;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media (max-width:500px) {
+    .menu-icon {
+        display: block;
+    }
+    .menu {
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 80px;
+        padding: var(--app-padding);
+        background-color: var(--app-header-background);
+    }
+    .menu ul {
+        display: none;
+    }
+    .menu ul.mobile {
+        display: block;
+    }
+    .menu ul li {
+        padding: 10px 0;
+    }
+    .menu li.hidden-mobile {
+        display: none;
+    }
 }

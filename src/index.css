@@ -20,7 +20,7 @@ code {
   --app-padding: 0 180px;
   --app-header-background: #000000;
 }
-@media (max-width: 769px) {
+@media (max-width: 920px) {
   :root {
     --app-padding: 0 30px;
   }
