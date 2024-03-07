@@ -14,9 +14,14 @@ function useState(initialValue) {
 export const LandingPageHeader = () => {
     
     const [showMenu, setMenu] = React.useState(false);
+    
 
     const toggleMenu = () => {
-        setMenu(showMenu === false)
+        if (showMenu === false){
+            setMenu(true)
+        } else {
+            setMenu(false)
+        }
     }
 
     return (<header className="header">
