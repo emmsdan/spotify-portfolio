@@ -1,4 +1,5 @@
 import './App.css';
+import { Features } from './components/Features';
 import { LandingPageHeader } from './components/Header/LandingPageHeader'
 import { Hero } from './components/Hero';
 
@@ -10,6 +11,7 @@ export function App() {
       title="Get Premium free for 7 days"
       amount={'$232'}
      />
+     <Features />
   </div>
   );
 }
