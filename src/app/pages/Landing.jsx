@@ -1,6 +1,7 @@
 import { Features } from '../components/Features';
 import { LandingPageHeader } from '../components/Header/LandingPageHeader'
 import { Hero } from '../components/Hero';
+import { PricingSection } from '../components/Pricing';
 
 export function Landing() {
   return (
@@ -11,6 +12,7 @@ export function Landing() {
       amount={'$232'}
      />
      <Features />
+     <PricingSection />
   </div>
   );
 }

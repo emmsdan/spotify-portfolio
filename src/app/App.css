@@ -23,6 +23,16 @@
       text-wrap: nowrap;
   }
 }
+.btn-invert {
+  background-color: #fff;
+  color: #000;
+}
+.btn-outline.btn-invert {
+  background-color: inherit;
+  color: #000;
+  border: 2px solid #000;
+  font-weight: bold;
+}
 
 section.green {
   background-color: greenyellow;

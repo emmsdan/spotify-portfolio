@@ -1,3 +1,4 @@
+import { combineClasses } from "../../../utils/format"
 
 export const CustomButton = (props) => {
     const classNames = {
@@ -6,12 +7,13 @@ export const CustomButton = (props) => {
         secondary: 'btn-secondary'
     }
     const className = classNames[props.type] || classNames.primary
+    const classes = combineClasses(className, props.className)
     return (
         props.onClick ? 
-        <button onClick={props.onClick} className={className}>
+        <button onClick={props.onClick} className={classes}>
             {props.children}
         </button> 
             : 
-        <a href="#" className={className}>{props.children}</a>
+        <a href="#" className={classes}>{props.children}</a>
     )
 }
