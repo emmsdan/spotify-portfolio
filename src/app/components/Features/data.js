@@ -14,11 +14,11 @@ export const features = [{
     image: OfflineMusicIcon,
     description: "Save your data by listening offline."
 },
-{
-    title: "Podcast playback",
-    image: PodcastArtIcon,
-    description: "Some fun right. naa just joking"
-},
+// {
+//     title: "Podcast playback",
+//     image: PodcastArtIcon,
+//     description: "Some fun right. naa just joking"
+// },
 {
     title: "Play everywhere",
     image: PlayAnywhereIcon,
