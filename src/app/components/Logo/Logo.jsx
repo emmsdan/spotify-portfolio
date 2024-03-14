@@ -14,3 +14,5 @@ export function Logo(props) {
 export function NavigationLogoText() {
     return (<h1>Spotify</h1>)
 }
+
+export default Logo

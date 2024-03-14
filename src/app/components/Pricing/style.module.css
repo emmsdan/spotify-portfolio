@@ -1,6 +1,6 @@
 .section {
+    padding: var(--app-padding);
     background-color: #EFEFEF;
-    padding: 5%;
     display: flex;
     justify-self: center;
     align-items: center;
@@ -16,6 +16,10 @@
     border-radius: 10px;
     color: #000;
     font-size: 16px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
 }
 
 .card span.free, .card span.one-time {
@@ -44,9 +48,13 @@
     border-bottom: 2px solid #ccc;
 }
 .content {
+    flex: 1;
     padding: 20px;
     padding-bottom: 0;
     box-shadow: -8px 10px 12px #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
 }
 .content ul {
     margin: 0;
@@ -61,7 +69,6 @@
 .content ul li p {
     margin: 0;
     margin-top: -4px;
-    position: absolute;
 }
 .content .button {
     width: 100%;
@@ -72,6 +79,8 @@
     padding: 20px;
     color: #535353;
     font-size: 12px;
+    height: fit-content;
+    
 }
 .footer a {
     color: #535353;
@@ -79,7 +88,7 @@
 }
 .flex {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
 }

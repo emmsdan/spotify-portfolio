@@ -4,7 +4,7 @@
     text-align: center;
     
     margin: 0;
-    padding: 15px;
+    padding: var(--app-padding);
     min-height: calc(480px - 30px);
     
     display: flex;

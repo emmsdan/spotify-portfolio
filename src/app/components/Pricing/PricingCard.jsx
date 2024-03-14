@@ -14,21 +14,17 @@ export const PricingCardItem = (props) => {
             </div>
             <div className={style.content}>
                 <ul>
-                    <li>
-                        <p>Ad-free music listening</p>
-                    </li>
-                    <li>
-                        <p>Group Session</p>
-                    </li>
-                    <li>
-                        <p>Download 10k songs/device on 5 devices</p>
-                    </li>
+                    {
+                        props.features && props.features.map((feature)=><li>
+                        <p>{feature}</p>
+                    </li>)
+                    }
+                    
                 </ul>
 
-                <br />
-                <p>
+                <div>
                     <CustomButton className={style.button} onClick={()=>{}}>View plans</CustomButton>
-                </p>
+                </div>
             </div>
 
             <div className={style.footer}>
