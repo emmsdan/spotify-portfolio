@@ -6,7 +6,7 @@ import { PricingSection } from '../components/Pricing';
 
 export function Landing() {
   return (
-  <div>
+  <div id="top-page">
     <LandingPageHeader />
     <Hero 
       title="Get Premium free for 7 days"

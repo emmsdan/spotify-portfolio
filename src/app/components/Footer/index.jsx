@@ -31,6 +31,9 @@ export default function Footer() {
                     <p>© 2023 Spotify AB</p>
                 </div>
             </div>
+            <div className={style.gotoTop}>
+                <a href="#top-page">Go to top</a>
+            </div>
     </footer>)
 }
 
