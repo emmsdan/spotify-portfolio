@@ -1,0 +1,5 @@
+.button:disabled {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* opacity: 0.3; */
+    /* filter: brightness(-100) */
+}

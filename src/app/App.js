@@ -5,6 +5,9 @@ import { useNavigation } from './hooks/useNavigation';
 import { Landing } from './pages/Landing';
 import { LoginPage } from './pages/Login';
 import { IsProtectedRoute } from './hoc/IsProtectedRoute';
+import { Toaster } from 'react-hot-toast';
+import { routes } from './routes';
+import { DashboardPage } from './pages/Dashboard';
 
 const router = createBrowserRouter([
   {
@@ -14,8 +17,8 @@ const router = createBrowserRouter([
       </IsProtectedRoute>),
   },
   {
-    path: 'dashboard',
-    element: <IsProtectedRoute><LoginPage /></IsProtectedRoute>
+    path: routes.dashboard(),
+    element: <IsProtectedRoute><DashboardPage /></IsProtectedRoute>
   },
   {
     path: 'login',
@@ -27,7 +30,10 @@ const router = createBrowserRouter([
   }
 ])
 export function App() {
- return <RouterProvider router={router} />
+ return <>
+  <Toaster />
+  <RouterProvider router={router} />
+ </>
 }
 
 // returns JSX, and the naming is PascalCase

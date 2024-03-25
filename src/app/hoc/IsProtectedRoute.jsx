@@ -1,9 +1,10 @@
 import React from 'react'
+import { isUserLogin } from '../../utils/user';
 
 export const IsProtectedRoute = ({ children }) => {
-    const user = JSON.parse(localStorage.getItem('user') ?? '{}');
+    const user = isUserLogin()
     // make an api with user id.
-    if (user.email && user.token) {
+    if (user) {
         return children;
     }
     window.location.href = '/login'
