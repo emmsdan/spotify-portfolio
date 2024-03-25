@@ -1,0 +1,29 @@
+.footer {
+    height: 91px;
+    background-color: #181818;
+    padding: var(--dashboard-padding);
+    border-block: 1px solid #282828;
+}
+.container {
+    color: #B3B3B3;
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.content-wrapper {
+    flex: 1;
+    display: flex;
+}
+.content-wrapper > aside {
+    background-color: #000;
+    width: 241px;
+}
+.content-wrapper > main {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.4), 
+        #191919
+         );
+    flex: 1;
+}
