@@ -37,3 +37,8 @@
 section.green {
   background-color: greenyellow;
 }
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}

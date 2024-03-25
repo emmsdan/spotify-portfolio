@@ -1,3 +1,4 @@
+import React from 'react'
 import SpotifyBlack from '../../assets/images/spotify-black.png'
 import SpotifyWhite from '../../assets/images/spotify-black.svg'
 import style from "./style.module.css"

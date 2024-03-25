@@ -1,4 +1,4 @@
-
+import React from "react"
 import { features } from "./data"
 import styles from './style.module.css'
 export const Features = () => {

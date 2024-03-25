@@ -1,13 +1,21 @@
+import React from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
 import { useNavigation } from './hooks/useNavigation';
 import { Landing } from './pages/Landing';
 import { LoginPage } from './pages/Login';
+import { IsProtectedRoute } from './hoc/IsProtectedRoute';
 
 const router = createBrowserRouter([
   {
     path: '',
-    Component: Landing,
+    element: (<IsProtectedRoute>
+      <Landing />
+      </IsProtectedRoute>),
+  },
+  {
+    path: 'dashboard',
+    element: <IsProtectedRoute><LoginPage /></IsProtectedRoute>
   },
   {
     path: 'login',

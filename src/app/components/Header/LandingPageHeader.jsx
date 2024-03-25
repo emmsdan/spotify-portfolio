@@ -1,5 +1,5 @@
+import React from 'react'
 import './LandingPageHeader.css'
-import React from "react"
 import { Logo } from '../Logo/Logo'
 import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg'
 

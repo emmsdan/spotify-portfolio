@@ -1,3 +1,4 @@
+import React from 'react'
 import { DiscountFlag } from './DiscountFlag'
 import { PricingCardItem } from './PricingCard'
 import {paymentMethods, pricingList}from './data'

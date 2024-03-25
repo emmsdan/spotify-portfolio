@@ -1,3 +1,4 @@
+import React from 'react'
 import { CustomButton } from "../Button"
 import style from './style.module.css'
 
