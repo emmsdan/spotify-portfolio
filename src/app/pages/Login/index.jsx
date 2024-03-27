@@ -30,7 +30,7 @@ export const LoginPage = () => {
         setRememberMe(event.target.checked)
     }
 
-    const handleLogin = () => {
+    const handleLogin = async () => {
         setIsSubmitting(true)
         const payload = { 
             username: email, 
@@ -38,30 +38,21 @@ export const LoginPage = () => {
             rememberMe 
         }
         console.log({payload}, "I'm inside handleLogin" )
-        fetch('https://dummyjson.com/auth/login', {
+        const response = await fetch('https://dummyjson.com/auth/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
         })
-        .then(async (response)=>{
-            if (response.status >= 400) {
-                const data = await response.json()
-                throw data
-            }
-            return response.json()
-        })
-        .then((response) => {
-            console.log("I got a login success", response)
-            localStorage.setItem('user', JSON.stringify(response))
-            window.location.href = routes.dashboard()
-        })
-        .catch((error) => {
+        const data = await response.json()
+        if (response.status >= 400) {
             toast.error(error.message);
             setError(error.message);
-        })
-        .finally(()=>{
-            setIsSubmitting(false)
-        })
+        } else {
+            console.log("I got a login success", data)
+            localStorage.setItem('user', JSON.stringify(data))
+            window.location.href = routes.dashboard()
+        }
+        setIsSubmitting(false)
     }
 
     useEffect(()=>{

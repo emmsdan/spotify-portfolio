@@ -2,11 +2,12 @@ import React from 'react'
 import SpotifyBlack from '../../assets/images/spotify-black.png'
 import SpotifyWhite from '../../assets/images/spotify-black.svg'
 import style from "./style.module.css"
+import { routes } from '../../routes'
 
 export function Logo(props) {
     const myImage = props.useWhite ? SpotifyWhite : SpotifyBlack
     return (
-        <a href='#/dashboard' className={style.logo}>
+        <a href={routes.dashboard()} className={style.logo}>
             <img src={myImage} />
         </a>
     )
