@@ -8,6 +8,7 @@ import { IsProtectedRoute } from './hoc/IsProtectedRoute';
 import { Toaster } from 'react-hot-toast';
 import { routes } from './routes';
 import { DashboardPage } from './pages/Dashboard';
+import { MainDashboard } from './pages/Dashboard/MainDashboard';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,17 @@ const router = createBrowserRouter([
   },
   {
     path: routes.dashboard(),
-    element: <IsProtectedRoute><DashboardPage /></IsProtectedRoute>
+    element: <IsProtectedRoute><DashboardPage /></IsProtectedRoute>,
+    children: [
+      {
+        path: '',
+        element: <MainDashboard />
+      },
+      {
+        path: routes.playlist(),
+        element: <h1>After tomoooo</h1>
+      },
+    ]
   },
   {
     path: 'login',

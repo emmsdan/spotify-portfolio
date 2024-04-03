@@ -1,14 +1,17 @@
 export const routes = {
-    dashboard(){ 
-        return "/dashboard"
+    dashboard(value=''){ 
+        return "/dashboard"+value
     },
     playlist(){
         const dashboard = this.dashboard() 
         return dashboard+"/playlist"
     },
     search(recommend){
-        const dashboard = this.dashboard() 
-        return dashboard+"/search?q="+recommend
+        return this.dashboard("search?q="+recommend)
     },
+
+    music(id){
+        return this.dashboard('music/'+id)
+    }
     
 }

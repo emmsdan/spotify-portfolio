@@ -1,0 +1,46 @@
+.horizontal, .main {
+    width: 357px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #424242;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.horizontal img {
+    width: 80px;
+    height: 80px;
+    box-shadow: 10px 1px 10px #2b2a2a;
+}
+
+.main {
+    flex-direction: column;
+    width: 187px;
+    height: 265px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 15px;
+    padding: 20px;
+    background-color: #181818;
+    font-family: Helvetica, Inter, sans-serif;
+}
+.main img {
+    width: 100%;
+    height: 175px;
+    box-shadow: 0 0 10px #2b2a2a;
+    border-radius: 8px;
+}
+
+.main .description {
+    color: #B3B3B3;
+    font-size: 11px;
+}
+.main span {
+    width: 100%;
+}
