@@ -2,6 +2,7 @@ import React from 'react'
 import style from "./style.module.css"
 import { Sidebar } from '../../components/Sidebar'
 import { Outlet } from 'react-router-dom'
+import { DashboardFooter } from '../../components/Footer/DashboardFooter'
 export const DashboardPage = () => {
 
     return (
@@ -15,7 +16,9 @@ export const DashboardPage = () => {
                 </main>
             </section>
 
-            <footer className={style.footer}>footer</footer>
+            <footer className={style.footer}>
+                <DashboardFooter />
+            </footer>
         </section>)
 }
 

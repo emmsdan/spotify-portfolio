@@ -9,13 +9,14 @@ import { Toaster } from 'react-hot-toast';
 import { routes } from './routes';
 import { DashboardPage } from './pages/Dashboard';
 import { MainDashboard } from './pages/Dashboard/MainDashboard';
+import { AudioContext } from './store/audioContext';
 
 const router = createBrowserRouter([
   {
     path: '',
     element: (<IsProtectedRoute>
       <Landing />
-      </IsProtectedRoute>),
+    </IsProtectedRoute>),
   },
   {
     path: routes.dashboard(),
@@ -41,10 +42,20 @@ const router = createBrowserRouter([
   }
 ])
 export function App() {
- return <>
-  <Toaster />
-  <RouterProvider router={router} />
- </>
+  const [audio, setAudio] = React.useState({
+    playing: '',
+    next: '',
+    prev: '',
+})
+const update = (playing, next, prev) => {
+  setAudio({ playing, next, prev })
+}
+  return <>
+    <AudioContext.Provider value={{audio, update}}>
+      <Toaster />
+      <RouterProvider router={router} />
+    </AudioContext.Provider>
+  </>
 }
 
 // returns JSX, and the naming is PascalCase

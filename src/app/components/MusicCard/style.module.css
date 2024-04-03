@@ -11,8 +11,11 @@
     text-decoration: none;
     border-radius: 8px;
     overflow: hidden;
+    cursor: pointer;
 }
-
+.active {
+    filter: invert(1);
+}
 .horizontal img {
     width: 80px;
     height: 80px;
