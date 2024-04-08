@@ -44,11 +44,12 @@ const router = createBrowserRouter([
 export function App() {
   const [audio, setAudio] = React.useState({
     playing: '',
+    current: {},
     next: '',
     prev: '',
 })
-const update = (playing, next, prev) => {
-  setAudio({ playing, next, prev })
+const update = (playing, next, prev, current) => {
+  setAudio({ playing, next, prev, current })
 }
   return <>
     <AudioContext.Provider value={{audio, update}}>

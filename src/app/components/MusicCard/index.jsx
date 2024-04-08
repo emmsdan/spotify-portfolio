@@ -6,7 +6,7 @@ import { AudioContext } from "../../store/audioContext"
 export const MusicCard = (props) => {
     const {audio, update} = React.useContext(AudioContext)
     const playMusic = ()=>{
-        update(props.music, props.title)
+        update(props.music, props.title, '', props)
     }
     const isplayingClass = props.title == audio.next ? style.active : ''
     return <div className={combineClasses(style.main, isplayingClass)}  onClick={playMusic}>

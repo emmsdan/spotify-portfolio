@@ -1,4 +1,4 @@
-.horizontal, .main {
+.horizontal, .main, .audio {
     width: 357px;
     height: 80px;
     display: flex;
@@ -46,4 +46,20 @@
 }
 .main span {
     width: 100%;
+}
+.audio {
+    background-color: transparent;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+}
+.audio img {
+    width: 56px;
+    height: 56px;
+}
+
+.audio p {
+    width: 100%;
+    font-size: 10px;
+    color: #B3B3B3;
 }

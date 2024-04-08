@@ -1,0 +1,63 @@
+.player {
+    flex: 1;
+}
+
+.player .rhap_container .rhap_progress-section {
+    display: flex;
+    align-items: center;
+}
+.rhap_progress-container {
+    flex: 1;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    height: 5px;
+    overflow: hidden;
+}
+.rhap_progress-bar {
+    position: relative;
+    height: 100%;
+}
+.rhap_progress-indicator {
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+}
+.rhap_progress-filled {
+    height: 100%;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.rhap_main.rhap_stacked {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.rhap_controls-section {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rhap_controls-section button {
+    background-color: transparent;
+    border: none;
+}
+
+.rhap_controls-section svg {
+    color: rgba(255, 255, 255, 0.69);
+    width: 26px;
+    height: 26px;
+}
+
+.rhap_controls-section button[aria-label="Disable loop"] svg{
+    color: #1DB954;
+}
+.rhap_play-pause-button svg {
+    color: #fff;
+    transform: scale(1.5);
+}
+.rhap_main-controls {
+    display: flex;
+    gap: 10px
+}
